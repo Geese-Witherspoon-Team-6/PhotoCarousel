@@ -5,9 +5,9 @@
 ## Related Projects
 
   - https://github.com/Geese-Witherspoon-Team-6/PhotoCarousel
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Geese-Witherspoon-Team-6/Reviews
+  - https://github.com/Geese-Witherspoon-Team-6/StoreFeatured
+  - https://github.com/Geese-Witherspoon-Team-6/ProductDetailsShipping
 
 ## Table of Contents
 
