@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'))
 
 app.get('/api/carousel/:productId', (req, res) => {
-  Product.findById(req.params.productId, (err, product) => {
+  Product.find({productId: req.params.productId}, (err, product) => {
     if (err) {
       return console.error(err);
     }
