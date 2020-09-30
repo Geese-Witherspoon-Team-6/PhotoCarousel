@@ -4,8 +4,9 @@
   "description": "> Project description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch --config webpack.config.js"
+    "test": "jest --detectOpenHandles --forceExit",
+    "build": "webpack --watch --config webpack.config.js -d",
+    "start": "nodemon server/app.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
