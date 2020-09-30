@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --detectOpenHandles --forceExit",
     "build": "webpack --watch --config webpack.config.js -d",
-    "start": "nodemon server/app.js"
+    "start": "nodemon server/app.js",
+    "seed": "node server/database/seed.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/Geese-Witherspoon-Team-6/PhotoCarousel#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "mongodb": "^3.6.2",
@@ -32,6 +34,7 @@
     "babel-loader": "^8.1.0",
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
+    "supertest": "^5.0.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   }
