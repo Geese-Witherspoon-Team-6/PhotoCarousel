@@ -4,7 +4,8 @@ mongoose.Promise = global.Promise;
 
 const productSchema = new mongoose.Schema({
   name: String,
-  photos: [String]
+  photos: [String],
+  productId: Number
 },
   {
     timestamps: true

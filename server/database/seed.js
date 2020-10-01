@@ -7,16 +7,20 @@ const faker = require('faker');
 //   photos: ['https://images.app.goo.gl/wp1AnspjSPWQiLcYA']});
 const blueBirdFakeData = [];
 
+let id = 1;
 while (blueBirdFakeData.length !== 100) {
   let productDoc = {};
+  productDoc.productId = id;
   productDoc.name = faker.commerce.productName();
   productDoc.photos = [];
   for (let i = 0; i < 5; i++) {
     productDoc.photos.push(faker.image.imageUrl());
   }
+
   blueBirdFakeData.push(productDoc);
+  id++;
 }
-// debugger;
+
 
 const insertFakeData = function () {
   Product.create(blueBirdFakeData)
