@@ -8,6 +8,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'))
 
+app.get('/api/carousel', (req, res) => {
+  Product.find({}, (err, products) => {
+    if (err) {
+      return console.error(err);
+    }
+    console.log(products);
+    res.send(products);
+  })
+})
+
 app.get('/api/carousel/:productId', (req, res) => {
   Product.find({productId: req.params.productId}, (err, product) => {
     if (err) {

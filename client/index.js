@@ -11,6 +11,16 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    axios.get('/api/carousel')
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+  }
+
   render() {
     return (
       <div>
