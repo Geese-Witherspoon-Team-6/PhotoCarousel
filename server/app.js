@@ -24,9 +24,19 @@ app.get('/api/carousel/:productId', (req, res) => {
       return console.error(err);
     }
     console.log(product);
-    res.send(product)
+    res.send(product);
   })
 });
+
+app.get('/api/carousel/products/:name', (req, res) => {
+  Product.find({name: req.params.name}, (err, product) => {
+    if (err) {
+      return console.error(err);
+    }
+    console.log(product);
+    res.send(product);
+  })
+})
 
 const port = 3000;
 app.listen(port, () => {
