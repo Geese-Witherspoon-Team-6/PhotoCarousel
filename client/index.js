@@ -1,6 +1,9 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+// import Button from 'react-bootstrap/Button';
+import Carousel from './Carousel.jsx';
 
 class App extends React.Component {
   constructor (props) {
@@ -35,8 +38,7 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <h2>{this.state.productData[0].name}</h2>
-          <img src={this.state.productData[0].photos[0]}/>
+          <Carousel />
         </div>
       );
     }
