@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
-import Carousel from './Carousel.jsx';
+import PhotoCarousel from './Carousel.jsx';
 import './dist/stylesheet.css';
 
 class App extends React.Component {
@@ -43,7 +43,7 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Carousel products={this.state.productData}/>
+          <PhotoCarousel products={this.state.productData}/>
           <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
