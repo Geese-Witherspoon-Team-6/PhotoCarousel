@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Carousel from './Carousel.jsx';
+import './dist/stylesheet.css';
 
 class App extends React.Component {
   constructor (props) {
@@ -43,7 +44,7 @@ class App extends React.Component {
       return (
         <div>
           <Carousel products={this.state.productData}/>
-          <Button onClick={this.log}>Test</Button>
+          <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
     }
