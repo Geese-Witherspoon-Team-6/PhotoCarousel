@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Carousel = () => {
+const Carousel = (props) => {
   return (
-    <h1>Testing Carousel</h1>
+    <div>
+      <h2>{props.products[0].name}</h2>
+      <img src={props.products[0].photos[0]}/>
+    </div>
   );
 }
 

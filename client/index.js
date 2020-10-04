@@ -38,7 +38,7 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Carousel />
+          <Carousel products={this.state.productData}/>
         </div>
       );
     }
