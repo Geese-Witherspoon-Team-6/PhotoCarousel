@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import Carousel from './Carousel.jsx';
 
 class App extends React.Component {
@@ -31,6 +31,10 @@ class App extends React.Component {
       })
   }
 
+  log() {
+    console.log('it Worked');
+  }
+
   render() {
     console.log('this is your data: ', this.state.productData);
     if (!this.state.isLoaded) {
@@ -39,6 +43,7 @@ class App extends React.Component {
       return (
         <div>
           <Carousel products={this.state.productData}/>
+          <Button onClick={this.log}>Test</Button>
         </div>
       );
     }
