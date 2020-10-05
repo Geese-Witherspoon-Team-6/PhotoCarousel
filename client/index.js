@@ -3,8 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
-import PhotoCarousel from './Carousel.jsx';
+import PhotoCarousel from './PhotoCarousel.jsx';
 import './dist/stylesheet.css';
+
 
 class App extends React.Component {
   constructor (props) {
@@ -43,7 +44,7 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <PhotoCarousel products={this.state.productData}/>
+          <PhotoCarousel products={this.state.productData} />
           <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
