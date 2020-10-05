@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import PhotoCarousel from './PhotoCarousel.jsx';
+import PhotoModal from './PhotoModal.jsx';
 import './dist/stylesheet.css';
 
 
@@ -45,6 +46,7 @@ class App extends React.Component {
       return (
         <div>
           <PhotoCarousel products={this.state.productData} />
+          <PhotoModal />
           <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );

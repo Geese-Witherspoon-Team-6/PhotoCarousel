@@ -5,3 +5,13 @@
 .button {
   background-color: blueviolet;
 }
+
+.carousel-image {
+  margin: 5%;
+  width: 75%;
+  height: max-content;
+}
+
+.carousel-title {
+  text-align: justify;
+}
