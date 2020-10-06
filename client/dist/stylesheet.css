@@ -15,3 +15,12 @@
 .carousel-title {
   text-align: justify;
 }
+
+.carousel-image:hover {
+  cursor: url(https://www.etsy.com/assets/dist/images/listzilla/expand-icon.20200413213051.svg), auto;
+}
+
+#carousel-modal-body .carousel-image:hover {
+  cursor: url(https://www.etsy.com/assets/dist/images/listzilla/zoom-icon-mag.20190424142747.svg), auto;
+}
+
