@@ -17,6 +17,7 @@ class App extends React.Component {
       productData: []
     }
     this.handleShowModal = this.handleShowModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   componentDidMount() {
@@ -40,11 +41,17 @@ class App extends React.Component {
     console.log('it Worked');
   }
 
-  handleShowModal(showModalFunc) {
+  handleShowModal() {
     console.log('ModalShowing: ', this.state.show);
     this.setState({
       show: true
     });
+  }
+
+  handleCloseModal() {
+    this.setState({
+      show: false
+    })
   }
 
 
@@ -56,7 +63,7 @@ class App extends React.Component {
       return (
         <div>
           <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
-          <PhotoModal show={this.state.show}/>
+          <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal}/>
           <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
