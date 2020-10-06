@@ -13,6 +13,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       isLoaded: false,
+      show: false,
       productData: []
     }
     this.handleShowModal = this.handleShowModal.bind(this);
@@ -27,7 +28,6 @@ class App extends React.Component {
         })
         this.setState({
           isLoaded: true,
-          show: false,
           productData: response.data
         })
       })
@@ -41,11 +41,12 @@ class App extends React.Component {
   }
 
   handleShowModal(showModalFunc) {
-    console.log('ModalShowing');
-    // this.setState({
-    //   show: true
-    // });
+    console.log('ModalShowing: ', this.state.show);
+    this.setState({
+      show: true
+    });
   }
+
 
   render() {
     console.log('this is your data: ', this.state.productData);
@@ -55,7 +56,7 @@ class App extends React.Component {
       return (
         <div>
           <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
-          <PhotoModal handleShowProp={this.handleShowModal}/>
+          <PhotoModal show={this.state.show}/>
           <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
