@@ -12,7 +12,7 @@ const PhotoCarousel = (props) => {
   }
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} wrap={false}>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} wrap={false} nextIcon={<span className="carousel-control-next-icon"></span>} prevIcon={<span className="carousel-control-prev-icon"></span>}>
       <Carousel.Item>
         <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
         <Carousel.Caption>
