@@ -15,6 +15,7 @@ class App extends React.Component {
       isLoaded: false,
       productData: []
     }
+    this.handleShowModal = this.handleShowModal.bind(this);
   }
 
   componentDidMount() {
@@ -26,6 +27,7 @@ class App extends React.Component {
         })
         this.setState({
           isLoaded: true,
+          show: false,
           productData: response.data
         })
       })
@@ -38,6 +40,13 @@ class App extends React.Component {
     console.log('it Worked');
   }
 
+  handleShowModal(showModalFunc) {
+    console.log('ModalShowing');
+    // this.setState({
+    //   show: true
+    // });
+  }
+
   render() {
     console.log('this is your data: ', this.state.productData);
     if (!this.state.isLoaded) {
@@ -45,8 +54,8 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <PhotoCarousel products={this.state.productData} />
-          <PhotoModal />
+          <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
+          <PhotoModal handleShowProp={this.handleShowModal}/>
           <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
