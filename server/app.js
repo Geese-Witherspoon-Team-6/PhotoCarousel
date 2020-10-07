@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'))
 
+
 app.get('/api/carousel', (req, res) => {
   Product.find({}, (err, products) => {
     if (err) {
@@ -17,6 +18,7 @@ app.get('/api/carousel', (req, res) => {
     res.send(products);
   })
 })
+
 
 app.get('/api/carousel/:productId', (req, res) => {
   Product.find({productId: req.params.productId}, (err, product) => {
@@ -37,6 +39,7 @@ app.get('/api/carousel/products/:name', (req, res) => {
     res.send(product);
   })
 })
+
 
 const port = 3000;
 app.listen(port, () => {
