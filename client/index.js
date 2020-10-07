@@ -1,25 +1,75 @@
-import react from 'react';
-import reactDom from 'react-dom';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
+import PhotoCarousel from './PhotoCarousel.jsx';
+import PhotoModal from './PhotoModal.jsx';
+import './dist/stylesheet.css';
+
 
 class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
       isLoaded: false,
-      productData: [{ "_id" : ObjectId("5f736e7a8e2fdd900863194c"), "photos" : [ "http://placeimg.com/640/480", "http://placeimg.com/640/480", "http://placeimg.com/640/480", "http://placeimg.com/640/480", "http://placeimg.com/640/480" ], "name" : "Practical Metal Tuna", "createdAt" : ISODate("2020-09-29T17:27:22.671Z"), "updatedAt" : ISODate("2020-09-29T17:27:22.671Z"), "__v" : 0 }]
+      show: false,
+      productData: []
     }
+    this.handleShowModal = this.handleShowModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
+  componentDidMount() {
+    axios.get('/api/carousel')
+      .then((response) => {
+        console.log(response);
+        let data = response.data.sort((a, b) => {
+          return a.productId - b.productId;
+        })
+        this.setState({
+          isLoaded: true,
+          productData: response.data
+        })
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+  }
+
+  log() {
+    console.log('it Worked');
+  }
+
+  handleShowModal() {
+    console.log('ModalShowing: ', this.state.show);
+    this.setState({
+      show: true
+    });
+  }
+
+  handleCloseModal() {
+    this.setState({
+      show: false
+    })
+  }
+
+
   render() {
-    return (
-      <div>
-        <h2>{this.state.productData[0].name}</h2>
-        <img src={this.state.productData[0].photos[0]}/>
-      </div>
-    );
+    console.log('this is your data: ', this.state.productData);
+    if (!this.state.isLoaded) {
+      return <h3>Loading...</h3>
+    } else {
+      return (
+        <div>
+          <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
+          <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
+          <Button className="button" onClick={this.log}>Test</Button>
+        </div>
+      );
+    }
   }
 }
 
 
-reactDom.render(<App />, document.getElementById('photoCarousel'));
+ReactDOM.render(<App />, document.getElementById('photoCarousel'));

@@ -21,11 +21,16 @@
   "homepage": "https://github.com/Geese-Witherspoon-Team-6/PhotoCarousel#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.2",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.7",
-    "mongoose-auto-increment": "^5.0.1"
+    "mongoose-auto-increment": "^5.0.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1"
   },
   "jest": {
     "testEnvironment": "node"
@@ -35,9 +40,11 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "supertest": "^5.0.0",
+    "style-loader": "^1.3.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   }

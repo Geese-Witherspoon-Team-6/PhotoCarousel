@@ -4,7 +4,9 @@ const faker = require('faker');
 
 const blueBirdFakeData = [];
 
+
 // I am currently using a while loop here and could refactor to a for loop. I had used the while loop before I realized I wanted to manually assign the id for each product instead of using the one created by mongoose.
+
 let id = 1;
 while (blueBirdFakeData.length !== 100) {
   let productDoc = {};
