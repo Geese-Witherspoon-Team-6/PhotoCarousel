@@ -62,9 +62,9 @@ class App extends React.Component {
     } else {
       return (
         <div>
+          <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
           <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
           <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
-          <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
     }
