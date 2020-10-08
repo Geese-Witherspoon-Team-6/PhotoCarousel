@@ -8,10 +8,8 @@ const PhotoModal = (props) => {
   return (
     <div>
       <Modal show={props.show} onHide={props.handleCloseModal} size="lg" centered>
-        <Modal.Header closeButton>
-          <Modal.Title>
-            Title
-          </Modal.Title>
+        <Modal.Header>
+          <Button onClick={props.handleCloseModal}>Close</Button>
         </Modal.Header>
         <Modal.Body>
           <div id="carousel-modal-body">
@@ -19,7 +17,6 @@ const PhotoModal = (props) => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.handleCloseModal}>Close</Button>
         </Modal.Footer>
       </Modal>
     </div>
