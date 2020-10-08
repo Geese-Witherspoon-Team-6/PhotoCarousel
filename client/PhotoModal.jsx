@@ -9,15 +9,13 @@ const PhotoModal = (props) => {
     <div>
       <Modal show={props.show} onHide={props.handleCloseModal} size="lg" centered>
         <Modal.Header>
-          <Button onClick={props.handleCloseModal}>Close</Button>
+          <img id="modal-close-button" onClick={props.handleCloseModal} src="https://i.imgur.com/6cD8jdm.png" />
         </Modal.Header>
         <Modal.Body>
           <div id="carousel-modal-body">
             <PhotoCarousel id="carousel-modal" products={props.products}/>
           </div>
         </Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
       </Modal>
     </div>
   );
