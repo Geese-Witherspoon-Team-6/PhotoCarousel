@@ -64,7 +64,6 @@ class App extends React.Component {
         <div>
           <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
           <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
-          <Button className="button" onClick={this.log}>Test</Button>
         </div>
       );
     }
