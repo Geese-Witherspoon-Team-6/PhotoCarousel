@@ -12,7 +12,7 @@ const PhotoCarousel = (props) => {
   }
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} wrap={false} nextIcon={<span className="carousel-control-next-icon"></span>} prevIcon={<span className="carousel-control-prev-icon"></span>}>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} wrap={false} nextIcon={<img className="carousel-control-next-icon" src="https://i.imgur.com/bI69be6.png"/>} prevIcon={<img className="carousel-control-prev-icon" src="https://i.imgur.com/ONkjUbB.png"/>}>
       <Carousel.Item>
         <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
       </Carousel.Item>
@@ -24,6 +24,7 @@ const PhotoCarousel = (props) => {
 
 }
 
+// <a href="https://imgur.com/ONkjUbB"><img src="https://i.imgur.com/ONkjUbB.png" title="source: imgur.com" /></a>
 
   // return (
   //   <div>
