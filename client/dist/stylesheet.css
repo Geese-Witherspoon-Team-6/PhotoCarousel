@@ -4,19 +4,18 @@
 
 #container{
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr ;
+  grid-template-columns: 1fr 1fr 2fr 1fr 2fr;
 }
 
 #photoCarousel {
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: 5;
 }
 
-.carousel-image {
-  margin: 5%;
-  width: 75%;
-  height: max-content;
-}
+/* #photoCarousel .carousel-image {
+  grid-column-start: 2;
+  grid-column-end: 4;
+} */
 
 
 .carousel-image:hover {
@@ -25,6 +24,7 @@
 
 #carousel-modal-body .carousel-image:hover {
   cursor: url(https://www.etsy.com/assets/dist/images/listzilla/zoom-icon-mag.20190424142747.svg), auto;
+  transform: scale(2,2);
 }
 
 .carousel-control-next-icon {
@@ -46,9 +46,7 @@
 }
 
 #love-button {
-  margin-top: 10%;
-  margin-left: 90%;
-  height: 45px;
-  width: 45px;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
