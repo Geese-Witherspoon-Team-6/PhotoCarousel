@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import PhotoCarousel from './PhotoCarousel.jsx';
 import PhotoModal from './PhotoModal.jsx';
 import './dist/stylesheet.css';
-
+var instance = axios.create({baseUrl: 'https://localhost/3000'})
 
 class App extends React.Component {
   constructor (props) {
@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/carousel')
+    instance.get('/api/carousel')
       .then((response) => {
         console.log(response);
         let data = response.data.sort((a, b) => {
