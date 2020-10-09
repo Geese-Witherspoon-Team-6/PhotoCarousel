@@ -4,12 +4,20 @@
 
 #container{
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 2fr;
+  grid-template-areas:
+    'left main right right';
+
+
 }
 
 #photoCarousel {
-  grid-column-start: 2;
-  grid-column-end: 5;
+  display: grid;
+  grid-area: main;
+  grid-template-areas:
+    'left-side main main right-side'
+
+  /* grid-row-start: ; */
+
 }
 
 /* #photoCarousel .carousel-image {
@@ -45,8 +53,8 @@
 
 }
 
-#love-button {
-  grid-column-start: 3;
-  grid-column-end: 4;
+#photoCarousel #love-button {
+  margin-left: 110%;
+  /* grid-area: rigth-side; */
 }
 
