@@ -8,6 +8,7 @@ import './dist/stylesheet.css';
 import { HeartButton } from './styled-components.jsx'
 import { ServiceContainer } from './styled-components.jsx'
 import { CarouselContainer } from './styled-components.jsx'
+import { ModalShow } from './styled-components.jsx'
 var instance = axios.create({ baseURL: 'http://localhost:3000' });
 
 class App extends React.Component {
@@ -64,21 +65,21 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <ServiceContainer>
+          <ServiceContainer className={this.state.show ? "modal-open" : ""}>
             <HeartButton>
               <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
             </HeartButton>
             <CarouselContainer>
               <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
             </CarouselContainer>
-            <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
-
+            {this.state.show ? <ModalShow> </ModalShow> : <div></div>}
           </ServiceContainer>
         </div>
-      );
-    }
-  }
-}
+            );
+          }
+        }
+      }
 
+      // <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
 
 ReactDOM.render(<App />, document.getElementById('photoCarousel'));
