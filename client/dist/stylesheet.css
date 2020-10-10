@@ -1,22 +1,3 @@
-.header {
-  text-align: center;
-}
-
-#container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr ;
-}
-
-#photoCarousel {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.carousel-image {
-  margin: 5%;
-  width: 75%;
-  height: max-content;
-}
 
 
 .carousel-image:hover {
