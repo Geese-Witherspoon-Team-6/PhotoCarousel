@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const GalleryButton = styled.div`
 
 `
-const HeartButton = styled.button`
-
+export const HeartButton = styled.button`
+  display: inline-block;
+  border: none;
+  border-radius: 24px;
+  right: 0 !important;
+  position: absolute !important;
 `
 
 export const ServiceContainer = styled.div`

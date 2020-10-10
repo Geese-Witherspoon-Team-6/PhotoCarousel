@@ -5,6 +5,7 @@ import axios from 'axios';
 import PhotoCarousel from './PhotoCarousel.jsx';
 import PhotoModal from './PhotoModal.jsx';
 import './dist/stylesheet.css';
+import { HeartButton } from './styled-components.jsx'
 var instance = axios.create({ baseURL: 'http://localhost:3000' });
 
 class App extends React.Component {
@@ -61,7 +62,9 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
+          <HeartButton>
+            <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
+          </HeartButton>
           <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
           <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
         </div>

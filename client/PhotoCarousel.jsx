@@ -14,13 +14,12 @@ const PhotoCarousel = (props) => {
   return (
     <div>
       <ServiceContainer>
-        <button><img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/></button>
         <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
       </ServiceContainer>
     </div>
-        )
+  )
 
-      }
+}
 
       // <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
 // <a href="https://imgur.com/ONkjUbB"><img src="https://i.imgur.com/ONkjUbB.png" title="source: imgur.com" /></a>
