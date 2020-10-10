@@ -13,9 +13,7 @@ const PhotoCarousel = (props) => {
 
   return (
     <div>
-      <ServiceContainer>
         <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
-      </ServiceContainer>
     </div>
   )
 

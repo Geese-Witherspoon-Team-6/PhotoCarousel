@@ -17,3 +17,9 @@ export const ServiceContainer = styled.div`
   display: block;
   position: relative !important;
 `;
+
+export const CarouselContainer = styled.div`
+  justify-content: center;
+  display: flex;
+  margin-top: 10%
+`;
