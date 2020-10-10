@@ -2,15 +2,19 @@
   text-align: center;
 }
 
-#container{
-  display: grid;
+/* #photoCarousel{
+  display: flex;
   grid-template-areas:
     'left main right right';
 
 
-}
+} */
 
-#photoCarousel {
+/* .photo-Carousel{
+  grid-area: right;
+} */
+
+/* #photoCarousel {
   display: grid;
   grid-area: main;
   grid-template-areas:
@@ -18,7 +22,7 @@
 
   /* grid-row-start: ; */
 
-}
+
 
 /* #photoCarousel .carousel-image {
   grid-column-start: 2;
