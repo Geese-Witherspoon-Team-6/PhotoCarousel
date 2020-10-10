@@ -11,5 +11,4 @@ const HeartButton = styled.button`
 export const ServiceContainer = styled.div`
   display: block;
   position: relative !important;
-  background-color: chocolate;
 `;
