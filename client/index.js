@@ -64,7 +64,7 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <ServiceContainer>
+          <ServiceContainer className={this.state.show ? "modal-open" : ""}>
             <HeartButton>
               <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
             </HeartButton>
