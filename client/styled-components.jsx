@@ -10,7 +10,8 @@ export const HeartButton = styled.button`
   border: none;
   border-radius: 24px;
   right: 0 !important;
-  position: absolute !important;
+  position: relative !important;
+  left: 96%;
 `
 
 export const ServiceContainer = styled.div`
