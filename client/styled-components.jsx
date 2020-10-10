@@ -16,6 +16,10 @@ export const HeartButton = styled.button`
 export const ServiceContainer = styled.div`
   display: block;
   position: relative !important;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 `;
 
 export const CarouselContainer = styled.div`
@@ -23,3 +27,25 @@ export const CarouselContainer = styled.div`
   display: flex;
   margin-top: 10%
 `;
+
+export const ModalShow = styled.div`
+  opacity: .5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+`
+
+export const ModalStyling = styled.div`
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  transition: opacity .15s linear;
+`
