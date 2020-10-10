@@ -2,10 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
 import PhotoCarousel from './PhotoCarousel.jsx';
 import PhotoModal from './PhotoModal.jsx';
 import './dist/stylesheet.css';
+import { HeartButton } from './styled-components.jsx'
+import { ServiceContainer } from './styled-components.jsx'
+import { CarouselContainer } from './styled-components.jsx'
 var instance = axios.create({ baseURL: 'http://localhost:3000' });
 
 class App extends React.Component {
@@ -62,9 +64,16 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
-          <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
-          <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
+          <ServiceContainer>
+            <HeartButton>
+              <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
+            </HeartButton>
+            <CarouselContainer>
+              <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
+            </CarouselContainer>
+            <PhotoModal show={this.state.show} handleCloseModal={this.handleCloseModal} products={this.state.productData}/>
+
+          </ServiceContainer>
         </div>
       );
     }
