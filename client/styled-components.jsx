@@ -37,6 +37,7 @@ export const ModalShow = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #000;
+  transition: opacity .15s linear;
 `
 
 export const ModalStyling = styled.div`
