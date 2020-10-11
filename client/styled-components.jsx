@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 
 const GalleryButton = styled.div`
@@ -40,7 +40,23 @@ export const CarouselPaneList = styled.ul`
   padding-left: 0;
   overflow: hidden !important;
   position: relative !important;
-`
+`;
+
+export const FadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+export const CarouselPane = styled.li`
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  animation: 600ms ${FadeIn} ease-in;
+}
+`;
 
 export const ModalShow = styled.div`
   opacity: .5;
