@@ -42,7 +42,7 @@ export const CarouselPaneList = styled.ul`
   position: relative !important;
 `;
 
-export const FadeIn = keyframes`
+const FadeIn = keyframes`
   0% {
     opacity: 0;
   }
