@@ -55,7 +55,13 @@ export const CarouselPane = styled.li`
   top: 0 !important;
   left: 0 !important;
   animation: 600ms ${FadeIn} ease-in;
-}
+
+  .carousel-image {
+    max-height: 100%;
+    transform: translateY(-50%) !important;
+    position: relative !important;
+    top: 50% !important;
+  }
 `;
 
 export const ModalShow = styled.div`
