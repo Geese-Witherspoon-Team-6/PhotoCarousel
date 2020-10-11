@@ -10,8 +10,6 @@ import { ServiceContainer } from './styled-components.jsx'
 import { CarouselContainer } from './styled-components.jsx'
 import { ModalShow } from './styled-components.jsx'
 import { ImageCarouselContainer } from './styled-components.jsx'
-import { CarouselPaneList } from './styled-components.jsx'
-import { CarouselPane } from './styled-components.jsx'
 var instance = axios.create({ baseURL: 'http://localhost:3000' });
 
 class App extends React.Component {

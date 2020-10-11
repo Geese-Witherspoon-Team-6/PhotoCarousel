@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ServiceContainer } from './styled-components.jsx'
+import { CarouselPaneList } from './styled-components.jsx'
+import { CarouselPane } from './styled-components.jsx'
 
 
 const PhotoCarousel = (props) => {
@@ -13,7 +14,11 @@ const PhotoCarousel = (props) => {
 
   return (
     <div>
-        <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
+      <CarouselPaneList>
+        <CarouselPane>
+          <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
+        </CarouselPane>
+      </CarouselPaneList>
     </div>
   )
 
