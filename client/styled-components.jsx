@@ -25,9 +25,22 @@ export const ServiceContainer = styled.div`
 
 export const CarouselContainer = styled.div`
   justify-content: center;
-  display: flex;
+  display: flex !important;
   margin-top: 10%
 `;
+
+export const ImageCarouselContainer = styled.div`
+  position: relative !important;
+  flex-grow: 6 !important;
+  flex-shrink: 1 !important;
+  flex-basis: 0% !important;
+`;
+
+export const CarouselPaneList = styled.ul`
+  padding-left: 0;
+  overflow: hidden !important;
+  position: relative !important;
+`
 
 export const ModalShow = styled.div`
   opacity: .5;
@@ -39,7 +52,7 @@ export const ModalShow = styled.div`
   height: 100vh;
   background-color: #000;
   transition: opacity .15s linear;
-`
+`;
 
 export const ModalStyling = styled.div`
   display: block;
@@ -50,4 +63,4 @@ export const ModalStyling = styled.div`
   width: 100%;
   height: 100%;
   transition: opacity .15s linear;
-`
+`;

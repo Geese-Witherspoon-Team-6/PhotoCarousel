@@ -9,6 +9,8 @@ import { HeartButton } from './styled-components.jsx'
 import { ServiceContainer } from './styled-components.jsx'
 import { CarouselContainer } from './styled-components.jsx'
 import { ModalShow } from './styled-components.jsx'
+import { ImageCarouselContainer } from './styled-components.jsx'
+import { CarouselPaneList } from './styled-components.jsx'
 var instance = axios.create({ baseURL: 'http://localhost:3000' });
 
 class App extends React.Component {
@@ -70,7 +72,11 @@ class App extends React.Component {
               <img id="love-button" src="https://i.imgur.com/Q5diR0M.png"/>
             </HeartButton>
             <CarouselContainer>
-              <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
+              <ImageCarouselContainer>
+                <CarouselPaneList>
+                  <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
+                </CarouselPaneList>
+              </ImageCarouselContainer>
             </CarouselContainer>
             {this.state.show ? <ModalShow> </ModalShow> : <div></div>}
           </ServiceContainer>
