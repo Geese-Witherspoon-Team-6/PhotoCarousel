@@ -74,11 +74,7 @@ class App extends React.Component {
             </HeartButton>
             <CarouselContainer>
               <ImageCarouselContainer>
-                <CarouselPaneList>
-                  <CarouselPane>
-                    <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
-                  </CarouselPane>
-                </CarouselPaneList>
+                <PhotoCarousel products={this.state.productData} handleShowModal={this.handleShowModal}/>
               </ImageCarouselContainer>
             </CarouselContainer>
             {this.state.show ? <ModalShow> </ModalShow> : <div></div>}
