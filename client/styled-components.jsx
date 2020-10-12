@@ -5,10 +5,11 @@ import styled, { keyframes } from 'styled-components';
 export const GalleryButton = styled.button`
   display: inline-block;
   cursor: pointer;
-  padding: 4%;
-  background: transparent
+  padding: 0;
+  background: transparent;
   border: none;
   box-shadow: 0px 2px 10px;
+  border-radius: 24px;
   #next-button {
     transform: rotate(180deg);
   }
@@ -18,6 +19,7 @@ export const HeartButton = styled.button`
   display: inline-block;
   border: none;
   border-radius: 24px;
+  padding: 0;
   background: transparent;
   box-shadow: 0px 2px 10px;
   right: 0 !important;
@@ -72,6 +74,10 @@ export const CarouselPane = styled.li`
     transform: translateY(-50%) !important;
     position: relative !important;
     top: 50% !important;
+  }
+
+  .carousel-image:hover {
+    cursor: url(https://www.etsy.com/assets/dist/images/listzilla/expand-icon.20200413213051.svg), auto;
   }
 `;
 
