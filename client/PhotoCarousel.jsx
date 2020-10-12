@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CarouselPaneList } from './styled-components.jsx'
 import { CarouselPane } from './styled-components.jsx'
+import { GalleryButton } from './styled-components.jsx'
 
 
 const PhotoCarousel = (props) => {
@@ -18,9 +19,12 @@ const PhotoCarousel = (props) => {
         <CarouselPane>
           <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
         </CarouselPane>
-        <CarouselPane>
-          <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
-        </CarouselPane>
+        <GalleryButton>
+          <img id="prev-button" src="https://i.imgur.com/ONkjUbB.png"/>
+        </GalleryButton>
+        <GalleryButton>
+          <img id="next-button" src="https://i.imgur.com/ONkjUbB.png"/>
+        </GalleryButton>
       </CarouselPaneList>
     </div>
   )

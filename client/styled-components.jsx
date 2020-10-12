@@ -2,13 +2,24 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 
-const GalleryButton = styled.div`
+export const GalleryButton = styled.button`
+  display: inline-block;
+  cursor: pointer;
+  padding: 4%;
+  background: transparent
+  border: none;
+  box-shadow: 0px 2px 10px;
+  #next-button {
+    transform: rotate(180deg);
+  }
 
 `
 export const HeartButton = styled.button`
   display: inline-block;
   border: none;
   border-radius: 24px;
+  background: transparent;
+  box-shadow: 0px 2px 10px;
   right: 0 !important;
   position: relative !important;
   left: 96%;
@@ -38,8 +49,8 @@ export const ImageCarouselContainer = styled.div`
 
 export const CarouselPaneList = styled.ul`
   padding-left: 0;
-  overflow: hidden !important;
-  position: relative !important;
+
+  position: absolute !important;
 `;
 
 const FadeIn = keyframes`
