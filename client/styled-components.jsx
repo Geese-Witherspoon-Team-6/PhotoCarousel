@@ -84,11 +84,12 @@ export const CarouselPane = styled.div`
   display: flex;
   margin: auto;
   order: 2;
-  animation: 600ms ${FadeIn} ease-in;
+
   justify-content: center;
 
   .carousel-image {
     max-height: 100%;
+    animation: 600ms ${FadeIn} ease-in;
     transform: translateY(-50%);
     position: relative;
     top: 50%;
