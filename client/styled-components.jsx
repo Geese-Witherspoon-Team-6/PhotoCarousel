@@ -52,6 +52,11 @@ export const ImageCarouselContainer = styled.div`
 export const CarouselPaneList = styled.div`
   padding-left: 0;
   position: absolute;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
 `;
 
 const FadeIn = keyframes`
