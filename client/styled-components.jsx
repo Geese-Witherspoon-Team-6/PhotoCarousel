@@ -63,9 +63,12 @@ const FadeIn = keyframes`
   }
 `;
 export const CarouselPane = styled.div`
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
   animation: 600ms ${FadeIn} ease-in;
 
   .carousel-image {

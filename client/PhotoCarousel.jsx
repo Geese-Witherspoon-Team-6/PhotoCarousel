@@ -16,7 +16,7 @@ const PhotoCarousel = (props) => {
   return (
     <div>
       <CarouselPaneList className="grid-container">
-        <CarouselPane>
+        <CarouselPane className="flex-container">
           <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
         </CarouselPane>
         <GalleryButton>
