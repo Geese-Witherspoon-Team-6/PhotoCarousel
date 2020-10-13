@@ -16,9 +16,11 @@ export const GalleryButton = styled.button`
 
   &.left-button {
     order: 1;
+    margin: auto;
   }
   &.right-button {
     order: 3;
+    margin: auto;
   }
 
 `
