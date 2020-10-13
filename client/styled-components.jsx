@@ -14,6 +14,13 @@ export const GalleryButton = styled.button`
     transform: rotate(180deg);
   }
 
+  &.left-button {
+    order: 1;
+  }
+  &.right-button {
+    order: 3;
+  }
+
 `
 export const HeartButton = styled.button`
   display: inline-block;
@@ -53,6 +60,7 @@ export const CarouselPaneList = styled.div`
   padding-left: 0;
   position: absolute;
   height: 100vh;
+  width: 100vw;
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -72,7 +80,8 @@ export const CarouselPane = styled.div`
   top: 0;
   left: 0;
   display: flex;
-  width: 100vw;
+  margin: auto;
+  order: 2;
   justify-content: center;
   animation: 600ms ${FadeIn} ease-in;
 

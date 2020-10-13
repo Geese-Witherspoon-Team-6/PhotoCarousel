@@ -19,10 +19,10 @@ const PhotoCarousel = (props) => {
         <CarouselPane className="flex-container">
           <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
         </CarouselPane>
-        <GalleryButton>
+        <GalleryButton className="left-button">
           <img id="prev-button" src="https://i.imgur.com/ONkjUbB.png"/>
         </GalleryButton>
-        <GalleryButton>
+        <GalleryButton className="right-button">
           <img id="next-button" src="https://i.imgur.com/ONkjUbB.png"/>
         </GalleryButton>
       </CarouselPaneList>
