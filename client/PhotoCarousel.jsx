@@ -16,9 +16,12 @@ class PhotoCarousel extends React.Component {
   }
 
 
-  handleSelect() {
-    console.log('selectedIndex: ', this.state.index);
-
+  handleSelect(button) {
+    if (button === 'next') {
+      console.log(this.state.index++)
+    } else {
+      console.log(this.state.index--)
+    }
 
   }
 
@@ -30,10 +33,10 @@ class PhotoCarousel extends React.Component {
           <CarouselPane className="flex-container">
             <img className="carousel-image" src={this.state.products[0].photos[this.state.index]} onClick={this.handleShowModal}/>
           </CarouselPane>
-          <GalleryButton className="left-button">
+          <GalleryButton className="left-button" onClick={() => this.handleSelect('prev')}>
             <img id="prev-button" src="https://i.imgur.com/ONkjUbB.png"/>
           </GalleryButton>
-          <GalleryButton className="right-button" onClick={this.handleSelect}>
+          <GalleryButton className="right-button" onClick={() => this.handleSelect('next')}>
             <img id="next-button" src="https://i.imgur.com/ONkjUbB.png"/>
           </GalleryButton>
         </CarouselPaneList>
