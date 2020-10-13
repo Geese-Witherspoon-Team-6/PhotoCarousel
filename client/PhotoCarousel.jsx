@@ -1,33 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CarouselPaneList } from './styled-components.jsx'
 import { CarouselPane } from './styled-components.jsx'
 import { GalleryButton } from './styled-components.jsx'
 
 
-const PhotoCarousel = (props) => {
-  const [index, setIndex] = useState(0);
-  console.log(props.products[0])
-  const handleSelect = (selectedIndex, e) => {
-    console.log('selectedIndex: ', selectedIndex);
-    setIndex(selectedIndex);
-    console.log('index: ', index);
+class PhotoCarousel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: props.products,
+      index: 0
+    }
+    this.handleSelect = this.handleSelect.bind(this);
+    this.handleShowModal = props.handleShowModal;
   }
 
-  return (
-    <div>
-      <CarouselPaneList className="parent-container">
-        <CarouselPane className="flex-container">
-          <img className="carousel-image" src={props.products[0].photos[index]} onClick={props.handleShowModal}/>
-        </CarouselPane>
-        <GalleryButton className="left-button">
-          <img id="prev-button" src="https://i.imgur.com/ONkjUbB.png"/>
-        </GalleryButton>
-        <GalleryButton className="right-button">
-          <img id="next-button" src="https://i.imgur.com/ONkjUbB.png"/>
-        </GalleryButton>
-      </CarouselPaneList>
-    </div>
-  )
+
+  handleSelect() {
+    console.log('selectedIndex: ', this.state.index);
+
+
+  }
+
+  render() {
+    console.log(this.state.products[0])
+    return (
+      <div>
+        <CarouselPaneList className="parent-container">
+          <CarouselPane className="flex-container">
+            <img className="carousel-image" src={this.state.products[0].photos[this.state.index]} onClick={this.handleShowModal}/>
+          </CarouselPane>
+          <GalleryButton className="left-button">
+            <img id="prev-button" src="https://i.imgur.com/ONkjUbB.png"/>
+          </GalleryButton>
+          <GalleryButton className="right-button" onClick={this.handleSelect}>
+            <img id="next-button" src="https://i.imgur.com/ONkjUbB.png"/>
+          </GalleryButton>
+        </CarouselPaneList>
+      </div>
+    );
+
+  }
 
 }
 
