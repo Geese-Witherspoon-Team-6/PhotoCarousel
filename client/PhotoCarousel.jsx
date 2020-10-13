@@ -19,14 +19,22 @@ class PhotoCarousel extends React.Component {
   handleSelect(button) {
     if (button === 'next') {
       console.log(this.state.index++)
+
+      this.setState({
+        index: this.state.index++
+      })
     } else {
       console.log(this.state.index--)
+      this.setState({
+        index: this.state.index--
+      })
     }
 
   }
 
   render() {
     console.log(this.state.products[0])
+    console.log(this.state.index)
     return (
       <div>
         <CarouselPaneList className="parent-container">
