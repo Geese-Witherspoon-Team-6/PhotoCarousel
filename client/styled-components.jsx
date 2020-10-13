@@ -92,6 +92,9 @@ export const CarouselPane = styled.div`
     transform: translateY(-50%);
     position: relative;
     top: 50%;
+    background: transparent;
+    border: none;
+    box-shadow: 0px 6px 10px
   }
 
   .carousel-image:hover {
