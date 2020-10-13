@@ -22,14 +22,14 @@ export const HeartButton = styled.button`
   padding: 0;
   background: transparent;
   box-shadow: 0px 2px 10px;
-  right: 0 !important;
-  position: relative !important;
+  right: 0;
+  position: relative;
   left: 96%;
 `
 
 export const ServiceContainer = styled.div`
   display: block;
-  position: relative !important;
+  position: relative;
 
   &.modal-open {
     overflow: hidden;
@@ -38,21 +38,20 @@ export const ServiceContainer = styled.div`
 
 export const CarouselContainer = styled.div`
   justify-content: center;
-  display: flex !important;
+  display: flex;
   margin-top: 10%
 `;
 
 export const ImageCarouselContainer = styled.div`
-  position: relative !important;
-  flex-grow: 6 !important;
-  flex-shrink: 1 !important;
-  flex-basis: 0% !important;
+  position: relative;
+  flex-grow: 6;
+  flex-shrink: 1;
+  flex-basis: 0%;
 `;
 
-export const CarouselPaneList = styled.ul`
+export const CarouselPaneList = styled.div`
   padding-left: 0;
-
-  position: absolute !important;
+  position: absolute;
 `;
 
 const FadeIn = keyframes`
@@ -63,17 +62,17 @@ const FadeIn = keyframes`
     opacity: 1;
   }
 `;
-export const CarouselPane = styled.li`
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
+export const CarouselPane = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   animation: 600ms ${FadeIn} ease-in;
 
   .carousel-image {
     max-height: 100%;
-    transform: translateY(-50%) !important;
-    position: relative !important;
-    top: 50% !important;
+    transform: translateY(-50%);
+    position: relative;
+    top: 50%;
   }
 
   .carousel-image:hover {
